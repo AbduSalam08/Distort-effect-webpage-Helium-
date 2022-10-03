@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helium</title>
+    <link rel="stylesheet" href="./assets/scss/main.css">
+    <!-- font monument extended -->
+    <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page">
+        <div class="nav">
+            <div class="logo">Hē</div>
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="main">
+
+                <div class="lc">
+                    <div class="introHead">
+                        <p>Welcome to</p>
+                        <h1><span>He</span>lium.</h1>
+                        <p class="introtext">
+                            chemical element <br>The symbol He <br> Atomic number 2.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rc">
+                    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/helium-5559853-4642634.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="tab2">
+                <div class="top">
+                    <img src="https://media.npr.org/assets/img/2019/11/04/ap_310923016_slide-0b640cddfbc1d1571b6703a9a36ee1c37c831551.jpg"
+                        alt="">
+                </div>
+
+                <div class="bottom">
+                    <h1>What is Helium ?</h1>
+                    <p>Helium is a chemical element with the symbol
+                        He and atomic number 2.It is a colorless, odorless, tasteless, non-toxic, inert, monatomic gas
+                        and the first in the noble gas group in the
+                        periodic table. Its boiling and melting point are the lowest among all the elements.</p>
+                </div>
+
+            </div>
+
+            <div class="tab3">
+                <h1>Use Cases</h1>
+                <div class="cardSection">
+
+                    <div class="card"><img
+                            src="https://lh5.googleusercontent.com/e_24NDL6zQju_Nz3a00XC_IBfO_rws3UE_3YhtBCTtlcDYKxYsYP2CeVH_4MvP9Zo-W9at_u15ObdSMnGBaX34Vgb1mvcxd0OAyyHlkppaddQLgoi4JuIae_ltMj-xPfAhYJARiz114xJqG6laQ"
+                            alt="card img"></div>
+                    <div class="card"><img
+                            src="https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjItMDgvYjFkMjVmMDgtOGJjNi00MDEyLTgxNzItYzI1Yzk4MGQyYjZiLmpwZw==.jpg"
+                            alt="card img"></div>
+                </div>
+            </div>
+
+            <div class="tab4">
+
+                <div class="cont">
+                    <img src="http://cdn.miscellaneoushi.com/1658x1269/20121115/abstract%20spiral%20grayscale%201658x1269%20wallpaper_www.miscellaneoushi.com_10.jpg"
+                        alt="">
+                    <div class="infoText">
+                        <h1>3d perspective</h1>
+                        <p>The 3DEXPERIENCE platform is a collaborative environment that empowers businesses to innovate
+                            in
+                            entirely new ways. It provides organizations a holistic, real-time view of their business
+                            activity and ecosystem, connecting people, ideas, data and solutions together in a single
+                            environment.</p>
+                    </div>
+                </div>
+
+                <div class="cont">
+                    <div class="infoText">
+                        <h1>What is Parallax effect ?</h1>
+                        <p>The effect whereby the position or direction of an object appears to differ when viewed from
+                            different positions, e.g.
+                            through the viewfinder and the lens of a camera.
+                            "what you see in the viewfinder won't be quite what you get in the photograph because of
+                            parallax error"</p>
+                    </div>
+                    <img src="https://i.pinimg.com/originals/ef/f4/8c/eff48ce72a9ff0068336a08104538918.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="tab5">
+
+                <h1>Thanks <br> For <br> Scrolling !</h1>
+
+                <img src="./assets/img/like.png" alt="">
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        // distort
+        const content = document.querySelector('.content');
+        let currentPos = window.pageYOffset;
+
+        const callDistort = () => {
+            const newPos = window.pageYOffset;
+            const diff = newPos - currentPos;
+            const speed = diff * 0.90;
+
+            content.style.transform = "skewY(" + speed + "deg)";
+            currentPos = newPos;
+
+            requestAnimationFrame(callDistort);
+        }
+        callDistort();
+
+        // smooth scroll 
+        const body = document.body,
+            scrollWrap = document.querySelector(".page"),
+            height = scrollWrap.getBoundingClientRect().height - 1,
+            speed = 0.04
+
+        var offset = 0;
+
+        body.scroll.height = Math.floor(height) + "px";
+
+        function smoothScroll() {
+            offset += (window.pageYOffset - offset) * speed;
+
+            var scroll = "translateY(-" + offset + "px) translateZ(0)";
+            scrollWrap.style.transform = scroll;
+
+            callScroll = requestAnimationFrame(smoothScroll);
+
+        }
+        smoothScroll();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "monument Extended";
+  transition: all 0.3s;
+} 
+
+body {
+  background-color: #181818;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7e7e7e;
+  border-radius: 50px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.flex, .tab5, .tab4 .cont, .tab4, .tab3 .cardSection, .tab3, .main .rc, .main .lc .introHead, .main, .nav .links, .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  border-bottom: 10px solid #7e7e7e;
+  box-shadow: 10px 0 40px #000000;
+}
+.nav .logo {
+  font-size: 30px;
+}
+.nav .links a {
+  color: #000;
+  font-size: 15px;
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  transition: transform 0.3s;
+  will-change: transform;
+}
+
+.main {
+  height: 90vh;
+  justify-content: flex-start;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 100px;
+}
+.main .lc {
+  width: 50%;
+}
+.main .lc .introHead {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.main .lc .introHead p {
+  padding: 20px;
+  padding-bottom: 0;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.main .lc .introHead h1 {
+  padding: 20px;
+  letter-spacing: 5px;
+  font-size: 100px;
+  color: #fff;
+  text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5019607843);
+}
+.main .lc .introHead h1 span {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  background-color: #fff;
+  color: #000;
+  box-shadow: -5px 5px 60px #000000;
+}
+.main .lc .introHead .introtext {
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.3764705882);
+  font-size: 12px;
+  line-height: 20px;
+}
+.main .rc {
+  width: 50%;
+  justify-content: flex-end;
+}
+.main .rc img {
+  width: 80%;
+  filter: drop-shadow(-5px 5px 30px #000);
+  transition: 0.6s ease-in-out !important;
+  -webkit-animation: rotateImg 10s 0.2s linear infinite forwards;
+          animation: rotateImg 10s 0.2s linear infinite forwards;
+}
+
+@-webkit-keyframes rotateImg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateImg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.tab2 {
+  color: #000;
+  height: 100vh;
+}
+.tab2 .top {
+  height: 50%;
+  margin-bottom: 50px;
+}
+.tab2 .top img {
+  border-radius: 10px;
+  filter: drop-shadow(-5px 5px 30px #000);
+}
+.tab2 .bottom {
+  color: rgba(255, 255, 255, 0.3764705882);
+}
+.tab2 .bottom h1 {
+  padding: 20px;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: -5px 5px 10px #000;
+}
+.tab2 .bottom p {
+  padding: 20px;
+  padding-top: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.tab3 {
+  height: 120vh;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.tab3 h1 {
+  font-size: 100px;
+  color: #fff;
+  text-shadow: -5px 5px 10px #000;
+  position: relative;
+  letter-spacing: 4px;
+}
+.tab3 h1::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5%;
+  width: 50%;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: -5px 5px 10px #000;
+}
+.tab3 .cardSection {
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+.tab3 .cardSection .card {
+  width: 40%;
+  height: 400px;
+  background-color: rgb(101, 100, 100);
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -5px 5px 20px #000000;
+}
+.tab3 .cardSection .card:hover {
+  transform: scale(1.05);
+}
+.tab3 .cardSection .card img {
+  filter: brightness(0.8);
+}
+
+.tab4 {
+  height: 120vh;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+.tab4 .cont {
+  width: 100%;
+  height: 400px;
+  margin: 50px 0;
+}
+.tab4 .cont img {
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.3137254902);
+}
+.tab4 .cont .infoText {
+  padding: 20px;
+  margin: 0 30px;
+  width: 50%;
+  color: rgba(255, 255, 255, 0.3764705882);
+}
+.tab4 .cont .infoText h1 {
+  color: #fff;
+  padding-bottom: 20px;
+}
+.tab4 .cont .infoText p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+.tab5 {
+  height: 100vh;
+  justify-content: space-between;
+}
+.tab5 h1 {
+  width: 60%;
+  font-size: 80px;
+  color: #fff;
+  letter-spacing: 4px;
+  text-shadow: -5px 5px 20px #000000;
+}
+.tab5 img {
+  width: 40%;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+  filter: drop-shadow(45px 35px 30px rgba(0, 0, 0, 0.5647058824));
+}/*# sourceMappingURL=main.css.map */
