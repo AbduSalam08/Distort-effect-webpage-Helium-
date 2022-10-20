@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "monument Extended";
+  font-family: "Monument Extended",sans-serif !important;
   transition: all 0.3s;
 } 
 
